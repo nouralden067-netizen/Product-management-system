@@ -102,3 +102,10 @@ td {
 #deleteAll{
     margin: 20px 0;
 }
+.btu{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+    display: none;
+}

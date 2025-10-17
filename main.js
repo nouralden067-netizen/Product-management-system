@@ -10,6 +10,7 @@ let submit = document.getElementById('submit');
 let mood = 'create';
 let tmp;
 
+
 // حساب التوتال
 function getTotal() {
   if (price.value != '') {
@@ -59,9 +60,9 @@ submit.onclick = function () {
     showData();
   }
   window.scroll({
-  top: 0,
-  behavior: 'smooth'
-});
+    top: 0,
+    behavior: 'smooth'
+  });
 
 };
 
@@ -177,4 +178,21 @@ function createRow(i) {
       <td><button onclick="updateData(${i})" id="update">Update</button></td>
       <td><button onclick="deleteData(${i})" id="delete">Delete</button></td>
     </tr>`;
+}
+
+let btuy = document.querySelector('.btu');
+
+window.onscroll = function () {
+  if (scrollY >= 400) {
+    btuy.style.display = 'block';
+  } else {
+    btuy.style.display = 'none';
+  }
+}
+btuy.onclick = function () {
+  scroll({
+    left: 0,
+    top: 0,
+    behavior: 'smooth'
+  })
 }
